@@ -47,6 +47,7 @@
                     <div>
                         <label for="password">Password</label>
                         <input type="password" name="" id="password" class="error">
+                        <p id="mismatch-notice">*Passwords don't match</p>
                     </div>
     
                     <div>
@@ -63,13 +64,20 @@
     <script>
         const passwordMatch = document.getElementById('password');
         const passwordConfirm = document.getElementById('confirm_password');
+        const mismatchAlert = document.getElementById('mismatch-notice');
         passwordConfirm.addEventListener('keyup', (event) => {
             if (passwordMatch.value === passwordConfirm.value) {
-            console.log("They equal!")
-            passwordConfirm.className = 'match';
-            passwordMatch.className = 'match';
+                console.log("They equal!")
+                passwordConfirm.className = 'match';
+                passwordMatch.className = 'match';
+                mismatchAlert.style.display = 'none';
             }
+            else {
+                passwordConfirm.className = 'error';
+                passwordMatch.className = 'error'; 
+                mismatchAlert.style.display = 'block';
 
+            }
         }
         )
         
