@@ -71,7 +71,7 @@ table {
 
 }
 
-#logo-contain {
+#logo-container {
     background-color:black;
     opacity: .7;
     width: auto;
@@ -103,22 +103,13 @@ label, input {
 input {
     margin-bottom: 8px;
 }
-input:invalid {
-    border-color: red;
-}
-input:valid {
-    border-color: green;
-}
 
 button:hover {
-    background-color: deeppink;
-}
-button:focus {
-    background-color: bisque;
+    background-color: rgb(80, 150, 207);
 }
 
 input:focus {
-    background-color: aqua;
+    background-color: rgb(179, 179, 239);
 }
 #button-container {
     display: flex;
@@ -128,17 +119,23 @@ input:focus {
 }
 
 input.error {
-    background-color: blueviolet;
+    border-color: rgb(255, 118, 118);
+    border-width: 2px;
+}
+
+input.match {
+    border-color: green;
+    border-width: 2px;
 }
 
 
-
+h2,
 p {
     margin: 20px;
 
 }
 
-p:first-child {
+h2:first-child {
     margin-top: 50px;
 }
 button {

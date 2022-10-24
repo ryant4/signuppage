@@ -11,7 +11,7 @@
 
     <div id="left">
         <div id="logo-container">
-            <img src="enron-logo-png-transparent.png" alt="Enron Logo">
+            <img id="logo" src="enron-logo-png-transparent.png" alt="Enron Logo">
         </div>
     </div>
     
@@ -66,11 +66,10 @@
         passwordConfirm.addEventListener('keyup', (event) => {
             if (passwordMatch.value === passwordConfirm.value) {
             console.log("They equal!")
-            passwordConfirm.style.backgroundColor = 'green';
+            passwordConfirm.className = 'match';
+            passwordMatch.className = 'match';
             }
-            else {
-                passwordConfirm.style.backgroundColor = 'red';
-            }
+
         }
         )
         
